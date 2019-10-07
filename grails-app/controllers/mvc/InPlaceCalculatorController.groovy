@@ -12,6 +12,9 @@ class InPlaceCalculatorController {
         if (0.0 == model.exam) {
             model.result = "Cannot calculate. Exam value was invalid."
         }
+        if(0.0 == model.en && 0.0 == model.exam){
+            model.result = "Cannot calculate. En and Exam value were invalid."
+        }
         render view: 'calc', model: [model: model]
     }
 }

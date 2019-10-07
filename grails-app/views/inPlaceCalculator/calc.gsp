@@ -20,17 +20,9 @@
 
 <form action="/inPlaceCalculator/calc" method="get">
   <fieldset class="form">
-    <div>
-      <label for='en'>En</label>
-      <input type="number decimal" name="en" value="${model.en}"
-             required="true" min="1.0" max="6.0" id="en"/>
-    </div>
 
-    <div>
-      <label for='exam'>Exam</label>
-      <input type="number decimal" name="exam" value="${model.exam}"
-             required="true" min="1.0" max="6.0" id="exam"/>
-    </div>
+    <tmpl:form_row name="en" label="En" calculatorInstance="${model}"/>
+    <tmpl:form_row name="exam" label="Exam" calculatorInstance="${model}"/>
 
     <div>
       <input type="submit" value="Calculate"/>
